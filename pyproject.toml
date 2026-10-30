@@ -10,12 +10,15 @@ authors = [
     { name = "Oliver Turnbull", email = "oturnbull1@gmail.com" }
 ]
 readme = "README.md"
+# `--separate_chains` also needs ANARCI, which is deliberately absent here.
+# The `anarci` package on PyPI is not an official release, so ANARCI must
+# come from Bioconda (`bioconda::anarci`); see README.md.
 dependencies = [
     "transformers",
     "torch",
     "click"
 ]
-requires-python = ">=3.6"
+requires-python = ">=3.11"
 
 [project.urls]
 "Homepage" = "https://github.com/olivert1/p-iggen"

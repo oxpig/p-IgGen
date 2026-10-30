@@ -32,7 +32,9 @@ class pIgGen:
         )
 
         self.model.eval()
-        self.tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
+        self.tokenizer = transformers.AutoTokenizer.from_pretrained(
+            model_name, cache_dir=cache_dir
+        )
         if device is None:
             if torch.cuda.is_available():
                 self.device = "cuda"
